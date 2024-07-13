@@ -1,0 +1,21 @@
+/*
+ Theme Name:   Contradata custom theme
+ Theme URI:    https://contradata.it
+ Description:  Custom theme extending Generatepress
+ Author:       Ulisse Snc
+ Author URI:   https://www.ulissewebagency.it/
+ Template:     generatepress
+ Version:      0.1
+*/
+
+:root {
+	--swiper-height: 400px;
+}
+
+.swiper {
+  width: 100%;
+	height:var(--swiper-height);
+}
+.swiper-slide {
+	min-height:var(--swiper-height);
+}
