@@ -35,8 +35,6 @@ class Swiper {
        wp_enqueue_script('swiper-js');
        wp_enqueue_style('swiper-css');
       wp_enqueue_script('swiper-config');
-    } else {
-    	logger("did not find swiper in content");
     } 
   }
   
