@@ -34,7 +34,7 @@ class Swiper {
        wp_register_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
        wp_enqueue_script('swiper-js');
        wp_enqueue_style('swiper-css');
-      wp_enqueue_script('swiper-config');
+       wp_enqueue_script('swiper-config');
     } 
   }
   
