@@ -14,6 +14,8 @@ class BlockLoader {
 
 
     public static function register_slider_block() {
-        register_block_type( plugin_dir_path(__FILE__) . '/blocks/slider-block' );
+		
+      register_block_type( dirname(__DIR__, 1) . '/blocks/slider-block/block.json' );
+
     }
 }
