@@ -1,14 +1,14 @@
 {
     "name": "contradata/slider-block",
-    "title": "Slider block",
-    "description": "A custom testimonial block that uses ACF fields.",
-    "style": [ "file:./testimonial.css" ],
+    "title": "slider block",
+    "description": "A custom block to display a slider custom-post element",
+    "style": [ "file:./slider.css" ],
     "category": "common",
-    "icon": "gallery",
+    "icon": "slides",
     "keywords": ["slider", "carousel", "ulisse"],
     "acf": {
         "mode": "preview",
-        "renderTemplate": "testimonial.php"
+        "renderTemplate": "blocks/slider-block/template.php"
     },
     "supports": {
         "anchor": true

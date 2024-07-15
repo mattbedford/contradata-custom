@@ -16,7 +16,7 @@ class Swiper {
   public static function CheckForSwiper (): void
   {
   	
-    if ( strpos( get_the_content(), 'swiper' ) !== false) {
+    if ( strpos( get_the_content(), 'swiper' ) !== false || is_page("swiper")) {
         wp_register_script(
             'swiper-js',
             'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
