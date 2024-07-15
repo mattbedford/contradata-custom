@@ -8,14 +8,3 @@
  Version:      0.1
 */
 
-:root {
-	--swiper-height: 400px;
-}
-
-.swiper {
-  width: 100%;
-	height:var(--swiper-height);
-}
-.swiper-slide .slide-content {
-	min-height:var(--swiper-height);
-}
