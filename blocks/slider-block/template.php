@@ -21,18 +21,18 @@ if( !$slides ) return;
 
 function print_slide($slide) {
 
-    $headline = $slide['headline'];
-    $text = $slide['text'];
+    $headline = $slide['slide_headline'];
+    $text = $slide['slide_text'];
     $background = $slide['slide_background_image'];
     $image = $slide['slide_image_content'];
-    $link = $slide['link'];
+    $link = $slide['slide_link'];
 
-    echo "<div class='swiper-slide' style='background-image: url($background)'>";
-    echo "<div class='slide-content'>";
-    echo "<h2>$headline</h2>";
-    echo "<p>$text</p>";
-    //echo "<a href='$link' class='btn'>Read more</a>";
-    echo "</div>";
+    echo "<div class='swiper-slide'>";
+    	echo "<div class='slide-content' style='background-image: url($background)'>";
+    		echo "<h2>$headline</h2>";
+    		echo "<p>$text</p>";
+    		echo "<a href='$link' class='btn'>Read more</a>";
+    	echo "</div>";
 	echo "</div>";
 }
 
@@ -42,6 +42,7 @@ echo "<div class='swiper-wrapper'>";
 foreach( $slides as $slide ) {
     print_slide($slide);
 }
+echo "</div>";
 
 if($pagination) {
     echo "<div class='swiper-pagination'></div>";
@@ -54,7 +55,6 @@ if($scrollbar) {
     echo "<div class='swiper-scrollbar'></div>";
 }
 echo "</div>";
-echo "</div>";
 
 
 ?>
@@ -62,28 +62,25 @@ echo "</div>";
 <script defer>
 
 
-new Swiper('<?php echo "swiper" . $slider_selector_id; ?>', {
+const x = new Swiper('<?php echo ".swiper" . $slider_selector_id; ?>', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
-
+  loop: false,
   <?php if($pagination) { ?>
     pagination: {
         el: '.swiper-pagination',
     },
   <?php } ?>
-
-    <?php if($navigation) { ?>
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+  <?php if($navigation) { ?>
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
     <?php } ?>
-
     <?php if($scrollbar) { ?>
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
+	scrollbar: {
+		el: '.swiper-scrollbar',
+	},
     <?php } ?>
 });
 

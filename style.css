@@ -16,6 +16,6 @@
   width: 100%;
 	height:var(--swiper-height);
 }
-.swiper-slide {
+.swiper-slide .slide-content {
 	min-height:var(--swiper-height);
 }
