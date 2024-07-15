@@ -23,19 +23,9 @@ $class_name = $args['class_name'];
 
 
 <div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
-    <!-- Our front-end template to loop the posts -->
     <?php
-    if( $data['posts']->have_posts() ) {
-        while( $data['posts']->have_posts() ) {
-            $data['posts']->the_post(); ?>
-            <div class="post">
-                <h2><?php the_title(); ?></h2>
-                <div class="post-content">
-                    <?php the_excerpt(); ?>
-                </div>
-            </div>
-            <?php
-        }
-    }
+        echo "<pre>";
+        print_r($args);
+        echo "</pre>";
     ?>
 </div>
